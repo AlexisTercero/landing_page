@@ -2,10 +2,11 @@
 
 :root {
   --font-main: 'Roboto', sans-serif;
+  --clr-neutral-000: white;
   --clr-neutral-100: #d8d7db;
-  --clr-accent-400: #7b7882;
+  --clr-accent-400: #807f84;
   --clr-neutral-600: #23222a;
-  --clr-neutral-900: #0f0f0f;
+  --clr-neutral-900: #030303;
 }
 
 *,
@@ -59,7 +60,7 @@ body {
 }
 
 .h2 {
-  color: var(--clr-neutral-600);
+  color: var(--clr-neutral-900);
   font-size: 3.2rem;
   text-align: center;
   font-weight: 900;
@@ -98,8 +99,13 @@ p {
   margin: 0 auto;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--clr-neutral-600);
+  background-color: var(--clr-neutral-000);
   z-index: 2;
+}
+
+.logo {
+  width: 63px;
+  height: 33.7px;
 }
 
 .nav-wrapper {
@@ -119,14 +125,14 @@ input[type='text'] {
   padding: 9px;
   border: none;
   background: url(media/ic_search.png) no-repeat 7px 7px;
-  background-color: rgba(0, 0, 0, 0.334);
+  background-color: rgba(0, 0, 0, 0.1);
   background-position: 10px 9px;
   background-repeat: no-repeat;
   padding-left: 35px;
 }
 
 ::placeholder {
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
 }
 /* VIDEO */
 
@@ -143,6 +149,11 @@ input[type='text'] {
   position: absolute;
   object-fit: cover;
   z-index: 0;
+}
+
+.big_logo {
+  width: 600px;
+  margin: 0 auto;
 }
 
 /* Just styling the content of the div, the *magic* in the previous rules */
@@ -184,6 +195,8 @@ input[type='text'] {
   padding: 0;
   width: 100vw;
   margin: 0 calc(-50vw + 50%);
+  position: sticky;
+  top: 58px;
 }
 
 /* Mini profiles */
@@ -231,11 +244,11 @@ input[type='text'] {
 
 .footer {
   display: flex;
-  background-color: var(--clr-neutral-600);
+  background-color: var(--clr-neutral-900);
   border-top: 12px solid var(--clr-accent-400);
   width: 100vw;
   margin: 0 auto;
-  height: 260px;
+  height: 340px;
   flex-direction: column;
 }
 
@@ -309,7 +322,7 @@ a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
   input[type='text'] {
     width: 120px;
   }
@@ -348,6 +361,10 @@ a:hover {
   .footer h4 {
     font-size: 0.8rem;
   }
+
+  .big_logo {
+    width: 400px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -374,5 +391,9 @@ a:hover {
     align-items: center;
     padding: 10px 0;
     margin: 0 auto;
+  }
+
+  .big_logo {
+    width: 260px;
   }
 }
