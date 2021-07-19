@@ -16,6 +16,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
+  transition: 300ms;
 }
 
 html {
@@ -135,7 +136,7 @@ input[type='text'] {
 ::placeholder {
   color: var(--clr-neutral-900);
 }
-/* VIDEO */
+/* -------- VIDEO ------------- */
 
 .video-container {
   padding-top: 58px;
@@ -152,11 +153,6 @@ input[type='text'] {
   z-index: 0;
 }
 
-.big_logo {
-  width: 600px;
-  margin: 0 auto;
-}
-
 /* Just styling the content of the div, the *magic* in the previous rules */
 .video-container .caption {
   position: relative;
@@ -165,8 +161,18 @@ input[type='text'] {
   z-index: 1;
 }
 
-.img-hero {
-  width: 100vw;
+.big_logo {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.shadow {
+  filter: drop-shadow(0px 0.3px 1px rgba(255, 255, 255, 0.6));
+}
+
+.shadow:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.6));
 }
 
 /* Photos */
@@ -184,7 +190,6 @@ input[type='text'] {
   margin-bottom: 52px;
   border-radius: 100%;
   box-shadow: 0px 0px 18px rgba(232, 221, 255, 0.15);
-  transition: 300ms;
 }
 
 .big-round:hover {
