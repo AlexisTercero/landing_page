@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
-  transition: all ease-in-out 300ms;
+  /* transition: all ease-in-out 300ms; */
 }
 
 html {
@@ -191,6 +191,7 @@ input[type='text'] {
   margin-bottom: 52px;
   border-radius: 100%;
   box-shadow: 0px 0px 18px rgba(232, 221, 255, 0.15);
+  transition: all ease-in-out 300ms;
 }
 
 .big-round:hover {
