@@ -96,6 +96,11 @@ p {
   text-align: center;
 }
 
+::selection {
+  background: rgba(110, 110, 110, 0.32);
+  color: var(--clr-neutral-900);
+}
+
 /* Navigation Bar*/
 .nav-container {
   position: fixed;
