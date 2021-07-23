@@ -1,4 +1,4 @@
-/* General setup */
+/* ----- General setup ------- */
 
 :root {
   --font-main: 'Roboto', sans-serif;
@@ -7,6 +7,10 @@
   --clr-accent-400: #807f84;
   --clr-neutral-600: #23222a;
   --clr-neutral-900: #030303;
+  --fs-200: 0.8rem;
+  --fs-400: 1rem;
+  --fs-600: 2.3rem;
+  --fs-900: 5rem;
 }
 
 *,
@@ -52,19 +56,19 @@ body {
   z-index: -3;
 }
 
-/* Typography*/
+/* -------- Typography -------- */
 
 .h1 {
   color: var(--clr-accent-400);
-  font-size: 5rem;
+  font-size: var(--fs-900);
   font-weight: 900;
   margin-top: -30px;
   text-align: center;
 }
 
 .h2 {
-  color: var(--clr-neutral-600);
-  font-size: 2.3rem;
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-600);
   text-align: center;
   font-style: italic;
   font-weight: 900;
@@ -72,12 +76,12 @@ body {
 
 h3 {
   color: var(--clr-accent-400);
-  font-size: 1rem;
+  font-size: var(--fs-400);
 }
 
 h4 {
   color: var(--clr-accent-400);
-  font-size: 1rem;
+  font-size: var(--fs-400);
   font-weight: 900;
 }
 
@@ -87,13 +91,12 @@ h5 {
 
 p {
   color: var(--clr-neutral-600);
-  font-size: 1rem;
+  font-size: var(--fs-400);
 }
 
 .paragraph {
-  width: 85%;
+  max-width: 50ch;
   margin: 6vh auto;
-  text-align: center;
 }
 
 ::selection {
@@ -101,15 +104,13 @@ p {
   color: var(--clr-neutral-900);
 }
 
-/* Navigation Bar*/
+/* --------- Navigation Bar --------- */
 .nav-container {
   position: fixed;
   display: flex;
   height: 58px;
   width: 100vw;
   margin: 0 auto;
-  /* left: 50%; */
-  /*   transform: translateX(-50%); */
   background-color: var(--clr-neutral-000);
   z-index: 2;
 }
@@ -145,6 +146,7 @@ input[type='text'] {
 ::placeholder {
   color: var(--clr-neutral-900);
 }
+
 /* -------- VIDEO ------------- */
 
 .video-container {
@@ -177,7 +179,6 @@ input[type='text'] {
 }
 
 .big_logo:hover {
-  /* filter: drop-shadow(-1px 2px 3px rgba(255, 255, 255, 0.6)); */
   opacity: 0;
 }
 
@@ -227,17 +228,17 @@ input[type='text'] {
 }
 
 .mini-profile h5 {
-  font-size: 0.8rem;
+  font-size: var(--fs-200);
   padding: 2px;
 }
 
 .email {
   font-weight: 400;
-  transition: 300ms;
+  transition: all 300ms ease-in-out;
 }
 
 .email:hover {
-  letter-spacing: 0.2px;
+  color: var(--clr-neutral-900);
 }
 
 .mini-profile img {
@@ -254,7 +255,7 @@ input[type='text'] {
   padding-right: 15px;
 }
 
-/* Footer */
+/* ---------- Footer ----------- */
 
 .footer {
   display: flex;
@@ -303,7 +304,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* Media Queries */
+/* ---------- Media Queries --------- */
 
 @media (max-width: 1440px) {
   .container {
@@ -373,7 +374,7 @@ a:hover {
   }
 
   .footer h4 {
-    font-size: 0.8rem;
+    font-size: var(--fs-200);
   }
 
   .big_logo {
@@ -386,17 +387,9 @@ a:hover {
     font-size: 100%;
   }
 
-  .h1 {
-    font-size: 3.3rem;
-  }
-
   .h2 {
     font-size: 1.8rem;
     margin-top: -1rem;
-  }
-
-  h4 {
-    font-size: 1rem;
   }
 
   .mini-profile,
